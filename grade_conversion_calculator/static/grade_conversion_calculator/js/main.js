@@ -14,7 +14,7 @@ var GradeConversionCalculator = (function ($) {
             "ug": ["4.0", "0.7"],
             "gr": ["4.0", "1.7"]
         },
-        selected_scale,
+        selected_scale = "ug",
         saved_calculator_values = [],
         saved_grade_scale = [],
         id_counter = 0,
@@ -408,7 +408,7 @@ var GradeConversionCalculator = (function ($) {
         add_row_template = Handlebars.compile($("#calculator-addrow-tmpl").html());
         id_counter = 0;
 
-        render_container.html(template());
+        render_container.html(template({}));
 
         $(".gp-scale-selector").find("select")
                                .change(change_grading_scale);
