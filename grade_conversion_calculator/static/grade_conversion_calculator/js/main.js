@@ -371,7 +371,7 @@ var GradeConversionCalculator = (function ($) {
 
     function cancel_conversion(ev) {
         ev.preventDefault();
-        set_selected_scale();
+        set_selected_scale("ug");
         clear_saved_data();
         render_container.trigger("cancelGradeConversion");
     }
