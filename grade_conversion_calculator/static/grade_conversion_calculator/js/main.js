@@ -108,6 +108,7 @@ var GradeConversionCalculator = (function ($) {
         selector.val(selected_scale).find("option")
                                     .filter("[value=" + selected_scale + "]")
                                     .attr("selected", "selected");
+        render_container.trigger("updateGradeScale", {"scale": selected_scale});
     }
 
     function valid_input(input) {
@@ -355,6 +356,7 @@ var GradeConversionCalculator = (function ($) {
         });
 
         if (error_count === 0) {
+            $(".gp-conversion-err").html("");
             render_container.trigger("saveGradeConversion", {
                 "scale": selected_scale,
                 "grade_scale": saved_grade_scale,
