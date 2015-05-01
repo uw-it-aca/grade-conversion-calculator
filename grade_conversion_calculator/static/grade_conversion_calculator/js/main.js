@@ -219,7 +219,7 @@ var GradeConversionCalculator = (function ($) {
             i;
 
         if (saved_grade_scale.length) {
-            params = saved_grade_scale;
+            params = saved_grade_scale.slice();
             // Saved scales don't include the lowest scale grade
             params.push({
                 grade: scales[selected_scale][scales[selected_scale].length - 1],
