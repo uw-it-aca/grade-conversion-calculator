@@ -130,7 +130,6 @@ var GradeConversionCalculator = (function ($) {
             i;
 
         $(".gp-calculator-row-container").empty();
-
         if (is_fixed_scale(selected_scale)) {
             text = gettext("calculator_min_" + selected_scale);
             $(".gp-calculator-row-container").html(text);
@@ -158,6 +157,7 @@ var GradeConversionCalculator = (function ($) {
             }
             $(".gp-calculator-header").show();
             $(".gp-conversion-calculator-buttons").show();
+            $(".gp-calculator-row-container").find("input:first").focus();
         }
     }
 
@@ -246,6 +246,10 @@ var GradeConversionCalculator = (function ($) {
         }
         update_lowest();
         highlight_calculator_grades();
+
+        if (is_fixed_scale(selected_scale)) {
+            $(".gp-scale-row-container").find("input:first").focus();
+        }
     }
 
     function apply_conversion() {
