@@ -33,8 +33,8 @@ var GradeConversionCalculator = (function ($) {
 
     function set_saved_scale(values) {
         if ($.isArray(values)) {
-           saved_grade_scale = values;
-       }
+            saved_grade_scale = values;
+        }
     }
 
     function set_saved_calculator(values) {
@@ -157,7 +157,6 @@ var GradeConversionCalculator = (function ($) {
             }
             $(".gp-calculator-header").show();
             $(".gp-conversion-calculator-buttons").show();
-            $(".gp-calculator-row-container").find("input:first").focus();
         }
     }
 
@@ -232,6 +231,7 @@ var GradeConversionCalculator = (function ($) {
         }
 
         $(".gp-scale-row-container").empty();
+
         for (i = 0, len = params.length; i < len; i++) {
             params[i].id = ++id_counter;
             params[i].is_last = (i === len - 1);
@@ -246,10 +246,6 @@ var GradeConversionCalculator = (function ($) {
         }
         update_lowest();
         highlight_calculator_grades();
-
-        if (is_fixed_scale(selected_scale)) {
-            $(".gp-scale-row-container").find("input:first").focus();
-        }
     }
 
     function apply_conversion() {
