@@ -273,6 +273,10 @@ var GradeConversionCalculator = (function ($) {
             if (percentage === "") {
                 has_error = true;
                 invalid_input(p, gettext("calculator_min_missing"));
+            } else if (percentage.match(/^[^-]+[-]/)) {
+                // Input looks like a range
+                has_error = true;
+                invalid_input(p, gettext("calculator_min_invalid"));
             } else {
                 percentage = Math.round(parseFloat(percentage) * 10) / 10;
                 if (isNaN(percentage) || percentage >= last_seen_percentage) {
@@ -309,6 +313,7 @@ var GradeConversionCalculator = (function ($) {
                     grade = "0" + grade;
                 }
                 g.val(grade);
+                p.val(percentage);
                 saved_calculator_values.push({grade: grade,
                                               percentage: percentage});
             }
