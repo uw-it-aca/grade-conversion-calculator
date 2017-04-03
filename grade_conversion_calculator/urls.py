@@ -1,7 +1,6 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 
 
-urlpatterns = patterns(
-    '',
-    url(r'^demo/?$', 'grade_conversion_calculator.views.demo'),
-)
+urlpatterns = [
+    url(r'^calculator-demo/?$', 'grade_conversion_calculator.views.demo'),
+]
