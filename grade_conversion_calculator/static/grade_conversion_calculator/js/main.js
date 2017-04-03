@@ -399,6 +399,7 @@ var GradeConversionCalculator = (function ($) {
     }
 
     function change_grading_scale() {
+        /*jshint validthis:true */
         set_selected_scale($(this).val());
         clear_saved_data();
         update_scale_selector();

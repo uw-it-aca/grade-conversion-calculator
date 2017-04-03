@@ -1,0 +1,19 @@
+sudo: false
+language: python
+python:
+- '2.7'
+- '3.4'
+- '3.5'
+- '3.6'
+before_script:
+- pip install -e .
+- pip install pep8
+- npm install jshint
+- cp travis-ci/manage.py manage.py
+script:
+- pep8 grade_conversion_calculator/
+- python -m compileall grade_conversion_calculator/
+- jshint grade_conversion_calculator/static/js/ --verbose
+before_deploy:
+- find grade_conversion_calculator/ -name \*.pyc -exec rm {} \;
+- echo $TRAVIS_TAG > grade_conversion_calculator/VERSION
