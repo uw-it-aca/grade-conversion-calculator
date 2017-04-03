@@ -17,3 +17,13 @@ script:
 before_deploy:
 - find grade_conversion_calculator/ -name \*.pyc -exec rm {} \;
 - echo $TRAVIS_TAG > grade_conversion_calculator/VERSION
+deploy:
+  provider: pypi
+  server: https://pypi.python.org/pypi
+  user: uw-it-aca
+  skip_cleanup: true
+  password:
+    secure: auAHkbF1VX37uCDgJi7APCMioIaheM+E/6ojeb8fWSe8j5dYao0GqsrEn6AZC+vlmnc06NePCsiI9tNOA/jOc0kHf3aMWQ1wj+ZO3tIJJhckaPvws3o1Kb//qbbSlBOtIi2urIXeKZ2gYYgl9scj9Q7AOPILczpb5KM15Vg4cQM=
+  on:
+    tags: true
+    python: '3.5'
