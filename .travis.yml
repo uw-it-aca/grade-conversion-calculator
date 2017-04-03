@@ -12,7 +12,7 @@ before_script:
 - cp travis-ci/manage.py manage.py
 script:
 - pep8 grade_conversion_calculator/
-- jshint grade_conversion_calculator/static/js/ --verbose
+- jshint grade_conversion_calculator/static/grade_conversion_calculator/js/ --verbose
 before_deploy:
 - find grade_conversion_calculator/ -name \*.pyc -exec rm {} \;
 - echo $TRAVIS_TAG > grade_conversion_calculator/VERSION
