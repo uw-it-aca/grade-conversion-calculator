@@ -1,6 +1,7 @@
-from django.conf.urls import include, url
+from django.conf.urls import url
+from grade_conversion_calculator.views import demo
 
 
 urlpatterns = [
-    url(r'^calculator-demo/?$', 'grade_conversion_calculator.views.demo'),
+    url(r'^calculator-demo/?$', demo, name='calculator_demo'),
 ]
