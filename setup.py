@@ -21,7 +21,7 @@ setup(
     author = 'UW-IT AXDD',
     author_email="aca-it@uw.edu",
     include_package_data=True,
-    install_requires=['Django==1.10.5'],
+    install_requires=['Django>=1.10,<1.11'],
     license='Apache License, Version 2.0',
     description='UW Grade Scale Conversion Calculator',
     long_description=README,
