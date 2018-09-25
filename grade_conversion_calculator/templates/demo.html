@@ -38,6 +38,7 @@
         <script src="{% static "grade_conversion_calculator/js/vendor/handlebars-1.0.0.min.js" %}"></script>
         <script src="{% static "grade_conversion_calculator/js/handlebars-i18n.js" %}"></script>
         <script src="{% static "grade_conversion_calculator/js/main.js" %}"></script>
+        <script src="{% url "javascript-catalog" %}"></script>
 
         <script type="text/javascript">
             $(document).ready(function() {
@@ -45,10 +46,6 @@
                 $("#calculator").grade_conversion_calculator(opts);
             });
         </script>
-
-
-        {% load handlebars_i18n %}
-        {% i18n_catalog "grade_conversion_calculator" %}
 
     </body>
 </html>

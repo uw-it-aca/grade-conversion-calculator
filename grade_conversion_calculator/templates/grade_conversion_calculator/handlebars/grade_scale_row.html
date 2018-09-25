@@ -1,5 +1,5 @@
-{% load templatetag_handlebars %}
-{% tplhandlebars "gradescale-row-tmpl" %}
+{% verbatim %}
+<script id="gradescale-row-tmpl" type="text/x-handlebars-template">
 <li class="form-group clearfix gp-scale-row{{# if is_last }} gp-lowest-grade{{ /if }}">
     <div class="pull-left gp-min-sign" aria-hidden="true">{{# if is_last }}&lt;{{ else }}≥{{ /if }}</div>
     {{# unless is_last }}
@@ -24,4 +24,5 @@
         </div>
     </div>
 </li>
-{% endtplhandlebars %}
+</script>
+{% endverbatim %}
