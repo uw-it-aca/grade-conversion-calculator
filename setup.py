@@ -23,7 +23,7 @@ setup(
     include_package_data=True,
     install_requires=['Django>=2.1,<3.0'],
     license='Apache License, Version 2.0',
-    description='UW Grade Scale Conversion Calculator',
+    description='UW Grade Scale Conversion Calculator application',
     long_description=README,
     url='https://github.com/uw-it-aca/grade-conversion-calculator',
     classifiers=[
