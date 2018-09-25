@@ -7,7 +7,7 @@ before_script:
 - pip install coverage
 - pip install python-coveralls
 - pip install pycodestyle
-- npm install jshint
+- npm install -g jshint
 - cp travis-ci/manage.py manage.py
 script:
 - pycodestyle grade_conversion_calculator/
