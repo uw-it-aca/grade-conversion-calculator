@@ -1,6 +1,5 @@
-from django.template import RequestContext
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 
 
 def demo(request):
-    return render_to_response("demo.html", {}, RequestContext(request))
+    return render(request, "demo.html", {})
