@@ -5,7 +5,7 @@ python:
 before_script:
 - pip install -e .
 - pip install coverage
-- pip install python-coveralls
+- pip install coveralls
 - pip install pycodestyle
 - npm install -g jshint
 - cp travis-ci/manage.py manage.py
