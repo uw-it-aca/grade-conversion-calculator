@@ -1,5 +1,5 @@
-{% load templatetag_handlebars %}
-{% tplhandlebars "calculator-row-tmpl" %}
+{% verbatim %}
+<script id="calculator-row-tmpl" type="text/x-handlebars-template">
 <li class="form-group clearfix gp-calculator-row">
     <fieldset>
     <legend class="sr-only">{{ trans "calculator_legend" }}</legend>
@@ -20,4 +20,5 @@
     </span>
     </fieldset>
 </li>
-{% endtplhandlebars %}
+</script>
+{% endverbatim %}
