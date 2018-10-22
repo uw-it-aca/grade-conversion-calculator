@@ -1,8 +1,8 @@
 {% verbatim %}
 <script id="gradescale-row-tmpl" type="text/x-handlebars-template">
-<li class="form-group clearfix gp-scale-row{{# if is_last }} gp-lowest-grade{{ /if }}">
-    <div class="pull-left gp-min-sign" aria-hidden="true">{{# if is_last }}&lt;{{ else }}≥{{ /if }}</div>
-    {{# unless is_last }}
+<li class="form-group clearfix gp-scale-row{{# if is_last}} gp-lowest-grade{{/if}}">
+    <div class="pull-left gp-min-sign" aria-hidden="true">{{# if is_last}}&lt;{{else}}≥{{/if}}</div>
+    {{# unless is_last}}
     <span class="pull-left col-xs-4 gp-calc-percentage">
         <input type="text" id="min-percentage-{{ id }}" name="min-percentage" value="{{ min_percentage }}" title="{{ trans "grade_scale_input_title" }}{{ grade }}" class="form-control gp-calc-input-percentage" required />
         <label for="min-percentage-{{ id }}" class="calculator-err">
@@ -14,7 +14,7 @@
      <span class="sr-only">{{ trans "grade_scale_limit_pre" }}</span>
      <span class="pull-left col-xs-4 gp-calc-percentage"></span>
     <span class="sr-only">{{ trans "grade_scale_limit_post" }}{{ grade }}.</span>
-    {{ /unless }}
+    {{/unless}}
 
     <div class="gp-scale-row-grade">
         <span class="gp-percent-sign" aria-hidden="true">%</span>
