@@ -1,4 +1,4 @@
-# grade-conversion-calculator
+# Grade Conversion Calculator
 
 [![Build Status](https://github.com/uw-it-aca/grade-conversion-calculator/workflows/tests/badge.svg?branch=master)](https://github.com/uw-it-aca/grade-conversion-calculator/actions)
 [![Coverage Status](https://coveralls.io/repos/github/uw-it-aca/grade-conversion-calculator/badge.svg?branch=master)](https://coveralls.io/github/uw-it-aca/grade-conversion-calculator?branch=master)
