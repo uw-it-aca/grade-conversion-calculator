@@ -5,5 +5,5 @@
 from django.views.generic import TemplateView
 
 
-def DemoView(TemplateView):
+class DemoView(TemplateView):
     template_name = 'demo.html'
