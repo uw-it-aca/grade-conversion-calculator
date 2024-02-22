@@ -28,7 +28,7 @@ name: tests
 env:
   APP_NAME: grade_conversion_calculator
   CONF_PATH: conf
-  COVERAGE_DJANGO_VERSION: 3.2
+  COVERAGE_DJANGO_VERSION: '4.2'
 
 on:
   push:
